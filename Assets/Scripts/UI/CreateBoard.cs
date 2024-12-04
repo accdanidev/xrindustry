@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-//using static UnityEditor.Rendering.CameraUI;
-//using static UnityEngine.Rendering.DebugUI.Table;
 using static UnityEngine.XR.ARSubsystems.XRCpuImage;
 using Unity.Burst.Intrinsics;
 using Unity.VisualScripting;
@@ -17,11 +15,15 @@ public class CreateBoard : MonoBehaviour
     [SerializeField] OpenAI_Manager openAI;
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] MapSpliter mapSpliter;
+    [SerializeField] NetworkPlayerControl nPC;
+    [SerializeField] Button button;
     bool sended = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        nPC = GetComponentInParent<NetworkPlayerControl>();
+        //button.onClick.AddListener(() => nPC.ActivatePersonalUI());
 
         sliderWidth.onValueChanged.AddListener(
             (v) =>
@@ -38,6 +40,24 @@ public class CreateBoard : MonoBehaviour
         mapSpliter = FindObjectOfType<MapSpliter>();
     }
 
+    public void OnClickMinus()
+    {
+        int value = (int)sliderWidth.value;
+        if ( value > 0)
+        {
+            sliderWidth.value -= 1;
+        }
+    }
+
+    public void OnClickPlus()
+    {
+        int value = (int)sliderWidth.value;
+        if (value < 10)
+        {
+            sliderWidth.value += 1;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -45,6 +65,8 @@ public class CreateBoard : MonoBehaviour
         {
             mapSpliter.IncomingMessage(openAI.responseBoard);
             sended = false;
+            this.gameObject.transform.parent.gameObject.SetActive(false);
+            nPC.ActivatePersonalUI();
         }
         //text.text = openAI.response;
     }

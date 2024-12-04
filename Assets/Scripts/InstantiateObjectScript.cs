@@ -10,7 +10,7 @@ public class InstantiateObjectScript : NetworkBehaviour
     [SerializeField] NetworkPrefabRef[] maps;
     [SerializeField] NetworkPrefabRef[] assambleAreas;
     [SerializeField] NetworkPrefabRef card;
-    [SerializeField] GameObject UIInit;
+    [SerializeField] GameObject UIInit, UIPersonal;
     [Networked] public string textToShow { get; set; }
 
 
@@ -28,6 +28,7 @@ public class InstantiateObjectScript : NetworkBehaviour
 
     }
 
+ 
     public void InstantiateMap(int numberMap)
     {
         Runner.Spawn(maps[numberMap]);
@@ -41,6 +42,11 @@ public class InstantiateObjectScript : NetworkBehaviour
             GameObject obj = Instantiate(UIInit, pleaceToInstantiate.transform);
         }
 
+    }
+
+    public void InstantiatePersonalUI(GameObject pleace)
+    {
+        GameObject obj = Instantiate(UIPersonal, pleace.transform);
     }
 
     public void InstantiateCard(Vector3 position)
