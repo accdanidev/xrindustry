@@ -547,7 +547,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5293131028841288317
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1127,7 +1127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8871169757842219280
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2293,9 +2293,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CreateBoard, Assembly-CSharp
-        m_MethodName: CreateLLMBoard
+      - m_Target: {fileID: 2727743861933636568}
+        m_TargetAssemblyTypeName: QuestionsLLMCall, Assembly-CSharp
+        m_MethodName: SendLLMOptimization
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2997,9 +2997,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CreateBoard, Assembly-CSharp
-        m_MethodName: CreateLLMBoard
+      - m_Target: {fileID: 2727743861933636568}
+        m_TargetAssemblyTypeName: QuestionsLLMCall, Assembly-CSharp
+        m_MethodName: SendLLMEfficiency
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3282,6 +3282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7675679752559907250}
   - component: {fileID: 2594449774100237868}
+  - component: {fileID: 2727743861933636568}
   m_Layer: 0
   m_Name: UIPersonal
   m_TagString: Untagged
@@ -3326,6 +3327,24 @@ MonoBehaviour:
   ePlusB: {fileID: 693700422227501530}
   valueOptimization: 0
   valueEfficiency: 0
+--- !u!114 &2727743861933636568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4178806569347533695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083fdd68ba3ee274bab4a8902f21acf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openAI: {fileID: 0}
+  instantiateOS: {fileID: 0}
+  mapSpliter: {fileID: 0}
+  valueOfData: 0
+  textProduction: {fileID: 9004407834036849153}
+  textEfficiency: {fileID: 4244271905455466220}
 --- !u!1 &4206911268736565902
 GameObject:
   m_ObjectHideFlags: 0

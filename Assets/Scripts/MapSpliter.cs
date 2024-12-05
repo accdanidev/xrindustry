@@ -65,15 +65,16 @@ public class MapSpliter : MonoBehaviour
                 if (character == "\n")
                 {
                     horizontal = 0;
-                    vertical += 0.2f;
+                    vertical += 0.16f;
                 }
-                instantiateObjectScript.IsntantiateObject(character, positionCorrect, Quaternion.identity);
+                instantiateObjectScript.InstantiateObject(character, positionCorrect, Quaternion.identity);
                 positionCorrect = new Vector3(horizontal, 0, vertical);
-                horizontal += 0.2f;
+                horizontal += 0.16f;
             }
 
-            instantiateObjectScript.InstantiateMap(1);
-            instantiateObjectScript.textToShow = information[0];
+            //instantiateObjectScript.InstantiateMap(1);
+            //instantiateObjectScript.SendLargeString(information[0]);
+            //instantiateObjectScript.textToShow = information[0];
             instantiateObjectScript.InstantiateCard(new Vector3(0, 1, 0));
 
         }

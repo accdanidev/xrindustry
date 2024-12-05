@@ -49,7 +49,7 @@ public class PersonalUIController : MonoBehaviour
         if (valueEfficiency > 0) 
         {
             valueEfficiency -= 1;
-            efficiencyText.text += valueEfficiency.ToString();
+            efficiencyText.text = valueEfficiency.ToString() + "%";
         }
     }
 
@@ -58,7 +58,7 @@ public class PersonalUIController : MonoBehaviour
         if(valueEfficiency < 15)
         {
             valueEfficiency += 1;
-            efficiencyText.text += valueEfficiency.ToString() + " %";
+            efficiencyText.text = valueEfficiency.ToString() + " %";
         }
     }
 }

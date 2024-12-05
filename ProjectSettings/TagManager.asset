@@ -8,6 +8,7 @@ TagManager:
   - Grabber
   - Button
   - Master
+  - Map
   layers:
   - Default
   - TransparentFX
