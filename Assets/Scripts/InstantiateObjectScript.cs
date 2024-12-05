@@ -10,7 +10,7 @@ public class InstantiateObjectScript : NetworkBehaviour
     [SerializeField] NetworkPrefabRef[] assambleAreas;
     [SerializeField] NetworkPrefabRef card;
     [SerializeField] GameObject UIInit, UIPersonal, cardUI;
-    [Networked] public string textToShow { get; set; }
+    public string textToShow;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,12 @@ public class InstantiateObjectScript : NetworkBehaviour
     {
     }
 
-    
+    [Rpc(RpcSources.StateAuthority, RpcTargets.All)]
+    public void RPC_SendLargeString(string str)
+    {
+        textToShow = str;
+    }
+
 
     // Instanciar un mapa específico
     public void InstantiateMap(int numberMap)
@@ -57,6 +62,7 @@ public class InstantiateObjectScript : NetworkBehaviour
     {
         if (cardUI == null)
         {
+            print("ingreso");
             Runner.Spawn(card, position, Quaternion.identity); // Instanciar la carta en la red
             cardUI = GameObject.Find("InfoCard");
             if (cardUI != null)

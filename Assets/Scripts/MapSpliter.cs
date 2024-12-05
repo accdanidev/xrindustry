@@ -73,7 +73,7 @@ public class MapSpliter : MonoBehaviour
             }
 
             //instantiateObjectScript.InstantiateMap(1);
-            //instantiateObjectScript.SendLargeString(information[0]);
+            instantiateObjectScript.RPC_SendLargeString(information[0]);
             //instantiateObjectScript.textToShow = information[0];
             instantiateObjectScript.InstantiateCard(new Vector3(0, 1, 0));
 
