@@ -9,14 +9,18 @@ public class CamTest : MonoBehaviour
     void Start()
     {
         snap = FindObjectOfType<SnapshotCamera>();
+        snap.gameObject.SetActive(false);
+        Invoke("CallTake", 0.5f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            snap.CallTakeSnapShot();
-        }
+        
+    }
+
+    public void CallTake()
+    {
+        snap.CallTakeSnapShot();
     }
 }

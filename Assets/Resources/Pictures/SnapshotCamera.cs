@@ -35,18 +35,13 @@ public class SnapshotCamera : MonoBehaviour
     public void CallTakeSnapShot()
     {
         snapCam.gameObject.SetActive (true);
-        print("Snapshot");
-    }
-
-    void LateUpdate()
-    {
         if (snapCam.gameObject.activeInHierarchy)
         {
-            
-            Texture2D snapShot = new Texture2D(resWith, resHeight,TextureFormat.RGB24, false);
+
+            Texture2D snapShot = new Texture2D(resWith, resHeight, TextureFormat.RGB24, false);
             snapCam.Render();
             RenderTexture.active = snapCam.targetTexture;
-            snapShot.ReadPixels(new Rect(0,0,resWith, resHeight), 0, 0);
+            snapShot.ReadPixels(new Rect(0, 0, resWith, resHeight), 0, 0);
             byte[] byetes = snapShot.EncodeToPNG();
             string fileName = SnapShotName();
             System.IO.File.WriteAllBytes(fileName, byetes);
@@ -55,8 +50,14 @@ public class SnapshotCamera : MonoBehaviour
         }
     }
 
+    void LateUpdate()
+    {
+       
+    }
+
     public string SnapShotName()
     {
+        print(Application.dataPath + "/snapshot1.png");
         return Application.dataPath + "/snapshot1.png";
     }
 

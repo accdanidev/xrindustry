@@ -11,7 +11,7 @@ public class AsignSnapShot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Invoke("AsignImage", 0.6f);
     }
 
     // Update is called once per frame
