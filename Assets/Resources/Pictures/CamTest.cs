@@ -8,7 +8,7 @@ public class CamTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        snap = FindObjectOfType<SnapshotCamera>();
     }
 
     // Update is called once per frame
