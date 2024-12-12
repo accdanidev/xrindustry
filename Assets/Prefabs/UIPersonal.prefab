@@ -2180,7 +2180,7 @@ GameObject:
   - component: {fileID: 7648302875739745951}
   m_Layer: 5
   m_Name: Minus
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2288,7 +2288,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2594449774100237868}
         m_TargetAssemblyTypeName: PersonalUIController, Assembly-CSharp
-        m_MethodName: OptimizationMinus
+        m_MethodName: EfficiencyMinus
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6785,9 +6785,10 @@ GameObject:
   - component: {fileID: 2478982051067092551}
   - component: {fileID: 532953188461622510}
   - component: {fileID: 8268445827870854618}
+  - component: {fileID: 4801267471722808511}
   m_Layer: 5
   m_Name: Button
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6906,6 +6907,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!65 &4801267471722808511
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2782683123251472609}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 500, y: 100, z: 1.5}
+  m_Center: {x: 0, y: 19.91, z: 0}
 --- !u!1 &2830135032221128970
 GameObject:
   m_ObjectHideFlags: 0
@@ -8119,9 +8141,10 @@ GameObject:
   - component: {fileID: 6281658828853522268}
   - component: {fileID: 9001566214045430064}
   - component: {fileID: 3653045578948479196}
+  - component: {fileID: 2725238284684800204}
   m_Layer: 5
   m_Name: Button
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8230,7 +8253,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2727743861933636568}
         m_TargetAssemblyTypeName: QuestionsLLMCall, Assembly-CSharp
-        m_MethodName: SendLLMOptimization
+        m_MethodName: SendLLMEfficiency
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8240,6 +8263,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!65 &2725238284684800204
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3198039184300766496}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 450, y: 100, z: 1.5}
+  m_Center: {x: 0, y: 19.29, z: 0}
 --- !u!1 &3272763857758913190
 GameObject:
   m_ObjectHideFlags: 0
@@ -8364,7 +8408,7 @@ GameObject:
   - component: {fileID: 6586856242661217406}
   m_Layer: 5
   m_Name: Plus
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8472,7 +8516,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2594449774100237868}
         m_TargetAssemblyTypeName: PersonalUIController, Assembly-CSharp
-        m_MethodName: OptimizationPlus
+        m_MethodName: EfficiencyPlus
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10683,7 +10727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   optimizationText: {fileID: 9004407834036849153}
-  efficiencyText: {fileID: 0}
+  efficiencyText: {fileID: 2608299087033191511}
   oMinusB: {fileID: 272692448289980668}
   eMinusB: {fileID: 0}
   oPlusB: {fileID: 3487907964197426913}
@@ -15712,7 +15756,7 @@ GameObject:
   - component: {fileID: 6640702937643387929}
   m_Layer: 5
   m_Name: Plus
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16806,7 +16850,7 @@ GameObject:
   - component: {fileID: 2224495427110681543}
   m_Layer: 5
   m_Name: Minus
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

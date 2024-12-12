@@ -16538,6 +16538,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIPersonal
       objectReference: {fileID: 0}
+    - target: {fileID: 4178806569347533695, guid: 66820eebe68564c48999f090f44d193e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7675679752559907250, guid: 66820eebe68564c48999f090f44d193e,
         type: 3}
       propertyPath: m_LocalPosition.x
