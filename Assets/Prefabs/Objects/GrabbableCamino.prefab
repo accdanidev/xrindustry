@@ -67,6 +67,7 @@ GameObject:
   - component: {fileID: 5499049069992259907}
   - component: {fileID: 4284803385212764776}
   - component: {fileID: 5996812911344916511}
+  - component: {fileID: 7839456140987125913}
   m_Layer: 0
   m_Name: GrabbableCamino
   m_TagString: Map
@@ -198,6 +199,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   authorityText: {fileID: 0}
   debugText: {fileID: 0}
+--- !u!95 &7839456140987125913
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3028507437269034974}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b83a9098fed97c648aa4823a5c65efd4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3352468702925949372
 GameObject:
   m_ObjectHideFlags: 0

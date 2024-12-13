@@ -29,7 +29,7 @@ public class InstantiateObjectScript : NetworkBehaviour
     }
 
 
-    // Instanciar un mapa específico
+    // Instanciar un mapa especï¿½fico
     public void InstantiateMap(int numberMap)
     {
         if (numberMap >= 0 && numberMap < maps.Length)
@@ -38,7 +38,7 @@ public class InstantiateObjectScript : NetworkBehaviour
         }
         else
         {
-            Debug.LogError("Índice de mapa fuera de rango.");
+            Debug.LogError("ï¿½ndice de mapa fuera de rango.");
         }
     }
 
@@ -57,7 +57,7 @@ public class InstantiateObjectScript : NetworkBehaviour
         Instantiate(UIPersonal, pleace.transform);
     }
 
-    // Instanciar la tarjeta en una posición específica
+    // Instanciar la tarjeta en una posiciï¿½n especï¿½fica
     public void InstantiateCard(Vector3 position)
     {
         if (cardUI == null)
@@ -71,7 +71,7 @@ public class InstantiateObjectScript : NetworkBehaviour
             }
             else
             {
-                Debug.LogWarning("No se encontró el objeto 'InfoCard' en la escena.");
+                Debug.LogWarning("No se encontrï¿½ el objeto 'InfoCard' en la escena.");
             }
         }
     }
@@ -94,7 +94,7 @@ public class InstantiateObjectScript : NetworkBehaviour
                 Runner.Spawn(assambleAreas[3], position, quaternion);
                 break;
             default:
-                Debug.LogWarning("Letra no válida para instanciar.");
+                Debug.LogWarning("Letra no vï¿½lida para instanciar.");
                 break;
         }
     }
@@ -113,7 +113,7 @@ public class InstantiateObjectScript : NetworkBehaviour
             }
             else
             {
-                Debug.Log("El elemento no tiene NetworkObject o la red no está corriendo.");
+                Debug.Log("El elemento no tiene NetworkObject o la red no estï¿½ corriendo.");
             }
         }
     }
