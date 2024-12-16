@@ -67,7 +67,6 @@ GameObject:
   - component: {fileID: 5499049069992259907}
   - component: {fileID: 4284803385212764776}
   - component: {fileID: 5996812911344916511}
-  - component: {fileID: 7839456140987125913}
   m_Layer: 0
   m_Name: GrabbableCamino
   m_TagString: Map
@@ -199,27 +198,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   authorityText: {fileID: 0}
   debugText: {fileID: 0}
---- !u!95 &7839456140987125913
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3028507437269034974}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b83a9098fed97c648aa4823a5c65efd4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3352468702925949372
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,6 +323,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5597963209753922679}
+  - component: {fileID: 4270961201972850439}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -368,3 +347,24 @@ Transform:
   - {fileID: 8693000842932252770}
   m_Father: {fileID: 8036340668404996155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &4270961201972850439
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8659366015288582392}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b83a9098fed97c648aa4823a5c65efd4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

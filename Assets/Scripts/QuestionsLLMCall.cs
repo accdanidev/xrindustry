@@ -31,6 +31,7 @@ public class QuestionsLLMCall : MonoBehaviour
     {
         if (openAI.responseBoard != "" && sended)
         {
+            print("enviando corotuitne");
             string text = openAI.responseBoard;
             openAI.responseBoard = "";
             mapSpliter.IncomingMessage(text);

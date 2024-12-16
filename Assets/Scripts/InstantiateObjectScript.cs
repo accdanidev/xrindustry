@@ -9,8 +9,9 @@ public class InstantiateObjectScript : NetworkBehaviour
     [SerializeField] NetworkPrefabRef[] maps;
     [SerializeField] NetworkPrefabRef[] assambleAreas;
     [SerializeField] NetworkPrefabRef card;
-    [SerializeField] GameObject UIInit, UIPersonal, cardUI;
-    public string textToShow;
+    [SerializeField] GameObject UIInit, UIPersonal, cardUI, shortCardUI;
+    public string textToShow, textToShowShort;
+    public GameObject UIo;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class InstantiateObjectScript : NetworkBehaviour
     public void RPC_SendLargeString(string str)
     {
         textToShow = str;
+        textToShowShort = textToShow.Length > 90 ? textToShow.Substring(0, 50) + "..." : textToShow;
     }
 
 
@@ -65,9 +67,12 @@ public class InstantiateObjectScript : NetworkBehaviour
             print("ingreso");
             Runner.Spawn(card, position, Quaternion.identity); // Instanciar la carta en la red
             cardUI = GameObject.Find("InfoCard");
+            shortCardUI = GameObject.Find("InfoCardShort");
+            shortCardUI.transform.parent.gameObject.transform.parent.gameObject.SetActive(false);
             if (cardUI != null)
             {
                 cardUI.GetComponent<TextMeshProUGUI>().text = textToShow;
+                shortCardUI.GetComponent<TextMeshProUGUI>().text = textToShowShort;
             }
             else
             {
@@ -77,8 +82,9 @@ public class InstantiateObjectScript : NetworkBehaviour
     }
 
     // Instanciar objetos dependiendo de una letra
-    public void InstantiateObject(string letter, Vector3 position, Quaternion quaternion)
+    public IEnumerator InstantiateObject(string letter, Vector3 position, Quaternion quaternion, float time)
     {
+        yield return new WaitForSeconds(time);
         switch (letter)
         {
             case "S":
@@ -97,6 +103,7 @@ public class InstantiateObjectScript : NetworkBehaviour
                 Debug.LogWarning("Letra no v�lida para instanciar.");
                 break;
         }
+        
     }
 
     // Eliminar mapas antiguos de la escena

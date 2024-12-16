@@ -60,6 +60,7 @@ public class MapSpliter : MonoBehaviour
             print(characterList.Count);
             float vertical = 0;
             float horizontal = 0;
+            float time = 0.5f;
             foreach (string character in characterList)
             {
                 if (character == "\n")
@@ -67,7 +68,8 @@ public class MapSpliter : MonoBehaviour
                     horizontal = 0;
                     vertical += 0.16f;
                 }
-                instantiateObjectScript.InstantiateObject(character, positionCorrect, Quaternion.identity);
+                StartCoroutine(instantiateObjectScript.InstantiateObject(character, positionCorrect, Quaternion.identity, time));
+                time += 0.5f;
                 positionCorrect = new Vector3(horizontal, 0, vertical);
                 horizontal += 0.16f;
             }
