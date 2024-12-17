@@ -14,7 +14,7 @@ public class ControllerRaycast : MonoBehaviour
     [SerializeField] Transform rayOrigin;
     [SerializeField] GameObject selectedObject;
     [SerializeField] bool hitted = false, selected = false;
-   // [SerializeField] LineRenderer lineRenderer;
+   //[SerializeField] LineRenderer lineRenderer;
     private Vector3 hitOffset;
 
 
@@ -32,9 +32,10 @@ public class ControllerRaycast : MonoBehaviour
             //lineRenderer.SetPosition(0, rayOrigin.position);
 
             RaycastHit hit;
+            //lineRenderer.SetPosition(1, rayOrigin.transform.forward);
             if (Physics.Raycast(rayOrigin.position, rayOrigin.forward, out hit, 2000))
             {
-               // lineRenderer.SetPosition(1, hit.point);
+                
 
                 // Detectar el objeto impactado
                 if (hit.collider.CompareTag("Grabber"))
