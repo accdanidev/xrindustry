@@ -24,7 +24,8 @@ public class MapSpliter : MonoBehaviour
     public void IncomingMessage(string message)
     {
         print("===" + message);
-        var match = Regex.Match(message, @"```([\s\S]*?)```");
+        //string m = "===" + message;
+        var match = Regex.Match(message, @"#===#([\s\S]*?)#===#");
         Vector3 positionCorrect = Vector3.zero;
         if (match.Success)
         {
