@@ -51,6 +51,7 @@ public class NetworkPlayerControl : NetworkBehaviour
         if (instantiatedUI == null)
         {
             // Instancia la UI personal localmente
+            FindObjectOfType<InstantiateObjectScript>().DeleteUI();
             instantiatedUI = Instantiate(UIPersonal, UiRef.transform);
             Debug.Log($"UI Personal activada para el jugador: {Object.InputAuthority}");
         }

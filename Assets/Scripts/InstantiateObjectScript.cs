@@ -11,7 +11,7 @@ public class InstantiateObjectScript : NetworkBehaviour
     [SerializeField] NetworkPrefabRef card;
     [SerializeField] GameObject UIInit, UIPersonal, cardUI, shortCardUI;
     public string textToShow, textToShowShort;
-    public GameObject UIo;
+    public GameObject UIToDelete;
 
     // Start is called before the first frame update
     void Start()
@@ -49,8 +49,13 @@ public class InstantiateObjectScript : NetworkBehaviour
     {
         if (isMaster)
         {
-            Instantiate(UIInit, pleaceToInstantiate.transform);
+            UIToDelete = Instantiate(UIInit, pleaceToInstantiate.transform);
         }
+    }
+
+    public void DeleteUI()
+    {
+        Destroy(UIToDelete);
     }
 
     // Instanciar la UI personal en el lugar correspondiente

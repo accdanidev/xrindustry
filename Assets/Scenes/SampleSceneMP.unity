@@ -5914,7 +5914,8 @@ MonoBehaviour:
   card:
     RawGuidValue: 80b65994d0f188841bb3f7e46da73ac8
   UIInit: {fileID: 1525090257436090351, guid: 707fc1bfcbaa0f142ad26e8dd6c63733, type: 3}
-  UIPersonal: {fileID: 0}
+  UIPersonal: {fileID: 4658112097311947917, guid: 8c536f16c695e28419be4f1afc8fab9e,
+    type: 3}
   cardUI: {fileID: 0}
   shortCardUI: {fileID: 0}
   textToShow: 

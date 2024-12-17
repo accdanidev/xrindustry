@@ -67,7 +67,7 @@ public class CreateBoard : MonoBehaviour
             openAI.responseBoard = "";
             mapSpliter.IncomingMessage(text);
             sended = false;
-            this.gameObject.transform.parent.gameObject.SetActive(false);
+            this.gameObject.transform.parent.transform.parent.transform.parent.transform.parent.gameObject.SetActive(false);
             nPC.ActivatePersonalUI();
         }
         //text.text = openAI.response;

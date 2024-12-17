@@ -342,7 +342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMaster: 0
   UiRef: {fileID: 1994909691642663447}
-  UIPersonal: {fileID: 4178806569347533695, guid: 66820eebe68564c48999f090f44d193e,
+  UIPersonal: {fileID: 4658112097311947917, guid: 8c536f16c695e28419be4f1afc8fab9e,
     type: 3}
 --- !u!114 &2105814616639219034 stripped
 MonoBehaviour:
