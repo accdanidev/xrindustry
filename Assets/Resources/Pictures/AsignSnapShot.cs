@@ -11,7 +11,7 @@ public class AsignSnapShot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("AsignImage", 0.6f);
+        Invoke("AsignImage", 0.7f);
     }
 
     // Update is called once per frame
@@ -22,7 +22,7 @@ public class AsignSnapShot : MonoBehaviour
 
     public void AsignImage()
     {
-        string filePath = Application.dataPath + "/snapshot1.png";
+        string filePath = Application.persistentDataPath + "/snapshot1.png";
 
         if (File.Exists(filePath))
         {
