@@ -9,6 +9,7 @@ public class MapSpliter : MonoBehaviour
 {
     [SerializeField] InstantiateObjectScript instantiateObjectScript;
     [SerializeField] List<string> information;
+    public int sizeMap;
     // Start is called before the first frame update
     void Start()
     {
