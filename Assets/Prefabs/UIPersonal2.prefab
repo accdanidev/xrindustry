@@ -6145,7 +6145,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -494, y: -568}
+  m_AnchoredPosition: {x: -494, y: -589}
   m_SizeDelta: {x: 185, y: 75.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3708935076612320615
@@ -6431,8 +6431,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -18.7, y: 228.99985}
-  m_SizeDelta: {x: 550.3, y: 337.5}
+  m_AnchoredPosition: {x: -18.7, y: 234.09}
+  m_SizeDelta: {x: 550.3, y: 268.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &998798903749701408
 CanvasRenderer:
@@ -8068,8 +8068,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Industrial Factory Acres Selection\nSelected Acres Details\L\nTotal Acres:
     [Insert total number of acres]\L\nUsable Land Area: [Insert percentage or actual
-    acreage]\L\nReserved for Expansion: [Specify percentage or area if applicable]\L\nSetbacks
-    for Environmental Compliance: [Insert area or buffer zones]"
+    acreage]\L"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 94b6f3255b920db408dc21a46cb83cb6, type: 2}
   m_sharedMaterial: {fileID: 8443863707542887629, guid: 94b6f3255b920db408dc21a46cb83cb6,
