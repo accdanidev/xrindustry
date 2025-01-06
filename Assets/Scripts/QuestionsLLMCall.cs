@@ -17,6 +17,10 @@ public class QuestionsLLMCall : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI textProduction, textEfficiency;
     bool sended;
+    [SerializeField]
+    GameObject animationLoading;
+    [SerializeField]
+    TextMeshProUGUI sizeMap, sizeMap2;
 
     void Start()
     {
@@ -24,6 +28,8 @@ public class QuestionsLLMCall : MonoBehaviour
         openAI = FindObjectOfType<OpenAI_Manager>();
         instantiateOS = FindObjectOfType<InstantiateObjectScript>();
         mapSpliter = FindObjectOfType<MapSpliter>();
+        sizeMap.text = mapSpliter.sizeMap.ToString() + ", 000";
+        sizeMap2.text = mapSpliter.sizeMap.ToString() + ", 000";
     }
 
     // Update is called once per frame
@@ -36,6 +42,7 @@ public class QuestionsLLMCall : MonoBehaviour
             openAI.responseBoard = "";
             mapSpliter.IncomingMessage(text);
             sended = false;
+            animationLoading.SetActive(false);
         }
     }
 
@@ -51,6 +58,7 @@ public class QuestionsLLMCall : MonoBehaviour
 
         openAI.CallModelBoard(llm);
         sended = true;
+        animationLoading.SetActive(true);
     }
 
     public void SendLLMEfficiency()
@@ -65,6 +73,7 @@ public class QuestionsLLMCall : MonoBehaviour
 
         openAI.CallModelBoard(llm);
         sended = true;
+        animationLoading.SetActive(true);
     }
 
     public void DeleteAllMap()

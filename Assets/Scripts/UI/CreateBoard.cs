@@ -79,6 +79,7 @@ public class CreateBoard : MonoBehaviour
 
 
         //string llm = "Create an ASCII map of a "+ widthBoard * heightBoard +"-acre car assembly plant on a grid with " + heightBoard + " rows and " + widthBoard + " columns. Each grid cell represents 0.5 acres. Divide the plant into three sections, each representing a zone with a specific purpose: Zone 1 - Welding: Place welding machinery (represented by the letter 'S') and paths (represented by the letter 'C'). Zone 2 - Assembly: Place assembly machinery (letter 'E') and paths ('C'). Zone 3 - Painting: Place painting machinery (letter 'P') and paths ('C'). Ensure there is always path access between zones to connect all three sections. Finally, return the ASCII representation in JSON format, where each cell is labeled according to its type, path structure, or machinery. Each cell should include its grid location, its content (type of machinery or path), and its corresponding zone.";
+        mapSpliter.sizeMap = widthBoard;
         print(llm);
         openAI.CallModelBoard(llm);
         sended = true;
